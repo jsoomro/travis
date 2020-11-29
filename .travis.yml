@@ -10,5 +10,5 @@ before_install:
   - chmod +x mvnw
 deploy:
   provider: heroku
-  api_key: 85f8eae3-6845-4d45-9660-fbef53a0b3b7
+  api_key: 39ade140-a578-462d-b8d9-b5860e6b52bc
   app: travis-ci-demo-rc
