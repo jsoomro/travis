@@ -8,9 +8,10 @@ addons:
       - oracle-java9-installer
 before_install:
   - chmod +x mvnw
-on:
-    branch: master
+#on:
+#    branch: master
 deploy:
   provider: heroku
   api_key: 85f8eae3-6845-4d45-9660-fbef53a0b3b7
-  app: travis-ci-demo-rc
+  app:
+    master: travis-ci-demo-rc
