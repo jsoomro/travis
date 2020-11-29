@@ -8,6 +8,13 @@ addons:
       - oracle-java9-installer
 before_install:
   - chmod +x mvnw
+before_deploy:
+  - git config --global user.email "rc-builds@travis-ci.com"
+  - git config --global user.name "Travis CI"
+  - export GIT_TAG=$TRAVIS_BRANCH-0.1.$TRAVIS_BUILD_NUMBER
+  - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
+  - git push -q https://github.com/jsoomro/travis --tags
+  - ls -R
 deploy:
   provider: heroku
   api_key: 39ade140-a578-462d-b8d9-b5860e6b52bc
