@@ -12,3 +12,6 @@ deploy:
   provider: heroku
   api_key: 39ade140-a578-462d-b8d9-b5860e6b52bc
   app: travis-ci-demo-rc
+on:
+    tags: true
+    branch: travis-auto
